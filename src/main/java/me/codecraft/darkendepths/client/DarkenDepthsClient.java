@@ -1,4 +1,4 @@
-package me.codecraft.darkendepths;
+package me.codecraft.darkendepths.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
