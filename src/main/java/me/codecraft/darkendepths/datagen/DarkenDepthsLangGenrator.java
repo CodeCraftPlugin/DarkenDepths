@@ -18,6 +18,10 @@ public class DarkenDepthsLangGenrator extends FabricLanguageProvider {
         translationBuilder.add(Items.DARK_SHOVEL, "Dark Shovel");
         translationBuilder.add(Items.DARK_PICKAXE, "Dark Pickaxe");
         translationBuilder.add(Items.DARK_HOE, "Dark Hoe");
+        translationBuilder.add(Items.DARK_HELMET, "Dark Helmet");
+        translationBuilder.add(Items.DARK_CHESTPLATE, "Dark Chestplate");
+        translationBuilder.add(Items.DARK_LEGGINGS, "Dark Leggings");
+        translationBuilder.add(Items.DARK_BOOTS, "Dark Boots");
     }
 }
 

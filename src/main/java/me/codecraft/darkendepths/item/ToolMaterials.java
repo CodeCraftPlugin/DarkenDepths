@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 
 public enum ToolMaterials implements ToolMaterial {
 
-    DARKNESS(6, 3000, 10.0F, 5.0F, 30, () -> {
+    DARKNESS(6, 3000, 15.0F, 5.0F, 30, () -> {
         return Ingredient.ofItems(Items.DARK_ESSENCE);
     });
 

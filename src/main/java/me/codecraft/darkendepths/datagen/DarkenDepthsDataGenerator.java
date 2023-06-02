@@ -9,5 +9,6 @@ public class DarkenDepthsDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(DarkenDepthsModelsDatagen::new);
         pack.addProvider(DarkenDepthsLangGenrator::new);
+        pack.addProvider(DarkenDepthsRecipesGenrator::new);
     }
 }

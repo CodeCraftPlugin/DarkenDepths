@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "hoe",
+  "key": {
+    "#": {
+      "item": "darkendepths:dark_essence"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "## ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "darkendepths:dark_hoe"
+  },
+  "show_notification": true
+}

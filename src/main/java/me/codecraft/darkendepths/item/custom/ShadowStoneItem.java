@@ -1,6 +1,7 @@
 package me.codecraft.darkendepths.item.custom;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -18,7 +19,16 @@ public class ShadowStoneItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
         if(!world.isClient){
-            user.sendMessage(Text.literal("You used the shadow stone!") , false);
+            if (user!=null&&!user.getInventory().armor.isEmpty()) {
+                System.out.println(user.getInventory().getArmorStack(0));
+                ItemStack boots = user.getInventory().getArmorStack(0).copy();
+                ItemStack leggings = user.getInventory().getArmorStack(0).copy();
+                ItemStack chestplate = user.getInventory().getArmorStack(0).copy();
+                ItemStack helemt = user.getInventory().getArmorStack(0).copy();
+                user.getInventory().armor.remove(2);
+                user.getInventory().armor.remove(3);
+                user.getInventory().armor.remove(4);
+            }
         }
         return super.use(world, user, hand);
     }

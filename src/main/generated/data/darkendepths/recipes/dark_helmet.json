@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "helmet",
+  "key": {
+    "#": {
+      "item": "darkendepths:dark_essence"
+    }
+  },
+  "pattern": [
+    "###",
+    "# #",
+    "   "
+  ],
+  "result": {
+    "item": "darkendepths:dark_helmet"
+  },
+  "show_notification": true
+}

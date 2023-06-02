@@ -26,5 +26,9 @@ public class DarkenDepthsModelsDatagen extends FabricModelProvider {
         itemModelGenerator.register(Items.DARK_AXE, Models.HANDHELD);
         itemModelGenerator.register(Items.DARK_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(Items.DARK_HOE, Models.HANDHELD);
+        itemModelGenerator.register(Items.DARK_HELMET, Models.GENERATED);
+        itemModelGenerator.register(Items.DARK_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(Items.DARK_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(Items.DARK_BOOTS, Models.GENERATED);
     }
 }

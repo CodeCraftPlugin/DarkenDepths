@@ -14,6 +14,10 @@ public class Items {
     public static final Item DARK_PICKAXE  = Registry.registerItems("dark_pickaxe", DarkenDepths.MOD_ID,new PickaxeItem(ToolMaterials.DARKNESS,10,5.0f,new FabricItemSettings()),GroupItems.DARKEN_DEPTHS_GROUP);
     public static final Item DARK_SHOVEL  = Registry.registerItems("dark_shovel", DarkenDepths.MOD_ID,new ShovelItem(ToolMaterials.DARKNESS,10,5.0f,new FabricItemSettings()),GroupItems.DARKEN_DEPTHS_GROUP);
     public static final Item DARK_HOE  = Registry.registerItems("dark_hoe", DarkenDepths.MOD_ID,new HoeItem(ToolMaterials.DARKNESS,10,5.0f,new FabricItemSettings()),GroupItems.DARKEN_DEPTHS_GROUP);
+    public static final Item DARK_HELMET  = Registry.registerItems("dark_helmet", DarkenDepths.MOD_ID,new ArmorItem(ArmorMaterials.DARKNESS, ArmorItem.Type.HELMET,new FabricItemSettings()),GroupItems.DARKEN_DEPTHS_GROUP);
+    public static final Item DARK_CHESTPLATE  = Registry.registerItems("dark_chestplate", DarkenDepths.MOD_ID,new ArmorItem(ArmorMaterials.DARKNESS, ArmorItem.Type.CHESTPLATE,new FabricItemSettings()),GroupItems.DARKEN_DEPTHS_GROUP);
+    public static final Item DARK_LEGGINGS  = Registry.registerItems("dark_leggings", DarkenDepths.MOD_ID,new ArmorItem(ArmorMaterials.DARKNESS, ArmorItem.Type.LEGGINGS,new FabricItemSettings()),GroupItems.DARKEN_DEPTHS_GROUP);
+    public static final Item DARK_BOOTS  = Registry.registerItems("dark_boots", DarkenDepths.MOD_ID,new ArmorItem(ArmorMaterials.DARKNESS, ArmorItem.Type.BOOTS,new FabricItemSettings()),GroupItems.DARKEN_DEPTHS_GROUP);
 
     public static void Itemsinit() {
         // This is a static class, so we need to call the init() method ourselves

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "axe",
+  "key": {
+    "#": {
+      "item": "darkendepths:dark_essence"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "## ",
+    "#S ",
+    " S "
+  ],
+  "result": {
+    "item": "darkendepths:dark_axe"
+  },
+  "show_notification": true
+}
