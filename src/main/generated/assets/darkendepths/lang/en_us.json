@@ -1,13 +1,14 @@
 {
-  "item.darkendepths.dark_axe": "Dark Axe",
-  "item.darkendepths.dark_boots": "Dark Boots",
-  "item.darkendepths.dark_chestplate": "Dark Chestplate",
+  "darkendepths.advancement.get_darkness_armor": "Get Full Darkened Armor",
+  "item.darkendepths.dark_axe": "Darkened Axe",
+  "item.darkendepths.dark_boots": "Darkened Boots",
+  "item.darkendepths.dark_chestplate": "Darkened Chestplate",
   "item.darkendepths.dark_essence": "Dark Essence",
-  "item.darkendepths.dark_helmet": "Dark Helmet",
-  "item.darkendepths.dark_hoe": "Dark Hoe",
-  "item.darkendepths.dark_leggings": "Dark Leggings",
-  "item.darkendepths.dark_pickaxe": "Dark Pickaxe",
-  "item.darkendepths.dark_shovel": "Dark Shovel",
-  "item.darkendepths.dark_sword": "Dark Sword",
+  "item.darkendepths.dark_helmet": "Darkened Helmet",
+  "item.darkendepths.dark_hoe": "Darkened Hoe",
+  "item.darkendepths.dark_leggings": "Darkened Leggings",
+  "item.darkendepths.dark_pickaxe": "Darkened Pickaxe",
+  "item.darkendepths.dark_shovel": "Darkened Shovel",
+  "item.darkendepths.dark_sword": "Darkened Sword",
   "item.darkendepths.shadow_stone": "Shadow Stone"
 }

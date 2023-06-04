@@ -1,0 +1,57 @@
+{
+  "parent": "darkendepths:root",
+  "criteria": {
+    "got_full_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "darkendepths:dark_helmet"
+            ]
+          },
+          {
+            "items": [
+              "darkendepths:dark_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "darkendepths:dark_leggings"
+            ]
+          },
+          {
+            "items": [
+              "darkendepths:dark_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "darkendepths.advancement.get_darkness_armor"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "darkendepths:dark_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Cover me With Darkness"
+    }
+  },
+  "requirements": [
+    [
+      "got_full_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  }
+}

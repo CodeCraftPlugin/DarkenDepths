@@ -13,17 +13,17 @@ import net.minecraft.util.Util;
 import java.util.EnumMap;
 import java.util.function.Supplier;
 
-public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
+public enum DarkenDepthsArmorMaterials implements StringIdentifiable, ArmorMaterial {
     DARKNESS("darkness", 48, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(Type.BOOTS, 5);
         map.put(Type.LEGGINGS, 8);
         map.put(Type.CHESTPLATE, 10);
         map.put(Type.HELMET, 5);
     }), 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 10.0F, 1.0f, () -> {
-        return Ingredient.ofItems(Items.DARK_ESSENCE);
+        return Ingredient.ofItems(DarkenDepthsItems.DARK_ESSENCE);
     });
 
-    public static final StringIdentifiable.Codec<ArmorMaterials> CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);
+    public static final StringIdentifiable.Codec<DarkenDepthsArmorMaterials> CODEC = StringIdentifiable.createCodec(DarkenDepthsArmorMaterials::values);
     private static final EnumMap<ArmorItem.Type, Integer> BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(Type.BOOTS, 13);
         map.put(Type.LEGGINGS, 15);
@@ -39,7 +39,7 @@ public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
     private final float knockbackResistance;
     private final Lazy<Ingredient> repairIngredientSupplier;
 
-    private ArmorMaterials(String name, int durabilityMultiplier, EnumMap protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier repairIngredientSupplier) {
+    private DarkenDepthsArmorMaterials(String name, int durabilityMultiplier, EnumMap protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;

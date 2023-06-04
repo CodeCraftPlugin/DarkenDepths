@@ -15,7 +15,7 @@
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "me.codecraft.darkendepths.datagen.DarkenDepthsDataGenerator"
+      "me.codecraft.darkendepths.DarkenDepthsDataGenerator"
     ],
     "client": [
       "me.codecraft.darkendepths.client.DarkenDepthsClient"

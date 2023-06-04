@@ -6,10 +6,10 @@ import net.minecraft.util.Lazy;
 
 import java.util.function.Supplier;
 
-public enum ToolMaterials implements ToolMaterial {
+public enum DarkenDepthsToolMaterials implements ToolMaterial {
 
     DARKNESS(6, 3000, 15.0F, 5.0F, 30, () -> {
-        return Ingredient.ofItems(Items.DARK_ESSENCE);
+        return Ingredient.ofItems(DarkenDepthsItems.DARK_ESSENCE);
     });
 
 
@@ -21,7 +21,7 @@ public enum ToolMaterials implements ToolMaterial {
     private final Lazy<Ingredient> repairIngredient;
 
 
-    ToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier repairIngredient) {
+    DarkenDepthsToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;

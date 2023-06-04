@@ -1,0 +1,20 @@
+package me.codecraft.darkendepths.blocks;
+
+import io.github.codecraftplugin.registrylib.utils.Registry;
+import me.codecraft.darkendepths.DarkenDepths;
+import me.codecraft.darkendepths.item.DarkenDepthsGroupItems;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.Material;
+
+public class DarkenDepthsBlocks {
+
+    public static final Block DARKENED_STONE_ORE = Registry.registerBlocks("darkened_stone_ore", DarkenDepths.MOD_ID,
+            new Block(FabricBlockSettings.of(Material.STONE, MapColor.BLACK).strength(1.5f, 6.0f).requiresTool()), DarkenDepthsGroupItems.DARKEN_DEPTHS_GROUP);
+
+
+
+    public static void init() {
+    }
+}

@@ -1,7 +1,8 @@
 package me.codecraft.darkendepths;
 
-import me.codecraft.darkendepths.item.GroupItems;
-import me.codecraft.darkendepths.item.Items;
+import me.codecraft.darkendepths.blocks.DarkenDepthsBlocks;
+import me.codecraft.darkendepths.item.DarkenDepthsGroupItems;
+import me.codecraft.darkendepths.item.DarkenDepthsItems;
 import net.fabricmc.api.ModInitializer;
 
 public class DarkenDepths implements ModInitializer {
@@ -9,7 +10,8 @@ public class DarkenDepths implements ModInitializer {
     public static final String MOD_ID = "darkendepths";
     @Override
     public void onInitialize() {
-        Items.Itemsinit();
-        GroupItems.GroupItemsinit();
+        DarkenDepthsItems.Itemsinit();
+        DarkenDepthsBlocks.init();
+        DarkenDepthsGroupItems.GroupItemsinit();
     }
 }

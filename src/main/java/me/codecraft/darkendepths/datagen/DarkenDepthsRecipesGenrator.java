@@ -1,16 +1,11 @@
 package me.codecraft.darkendepths.datagen;
 
-import com.google.common.collect.Lists;
 import io.github.codecraftplugin.registrylib.utils.RegistryRecipeProvider;
-import me.codecraft.darkendepths.item.Items;
+import me.codecraft.darkendepths.item.DarkenDepthsItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.item.ItemConvertible;
-import net.minecraft.util.Util;
 
-import java.util.List;
 import java.util.function.Consumer;
 
 public class DarkenDepthsRecipesGenrator extends FabricRecipeProvider {
@@ -22,15 +17,15 @@ public class DarkenDepthsRecipesGenrator extends FabricRecipeProvider {
     }
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        RegistryRecipeProvider.offerAxeRecipe(exporter, Items.DARK_AXE, Items.DARK_ESSENCE);
-        RegistryRecipeProvider.offerHoeRecipe(exporter, Items.DARK_HOE, Items.DARK_ESSENCE);
-        RegistryRecipeProvider.offerPickaxeRecipe(exporter, Items.DARK_PICKAXE, Items.DARK_ESSENCE);
-        RegistryRecipeProvider.offerShovelRecipe(exporter, Items.DARK_SHOVEL, Items.DARK_ESSENCE);
-        RegistryRecipeProvider.offerSwordRecipe(exporter, Items.DARK_SWORD, Items.DARK_ESSENCE);
-        RegistryRecipeProvider.offerHelmetRecipe(exporter, Items.DARK_HELMET, Items.DARK_ESSENCE);
-        RegistryRecipeProvider.offerChestplateRecipe(exporter, Items.DARK_CHESTPLATE, Items.DARK_ESSENCE);
-        RegistryRecipeProvider.offerLeggingsRecipe(exporter, Items.DARK_LEGGINGS, Items.DARK_ESSENCE);
-        RegistryRecipeProvider.offerBootsRecipe(exporter, Items.DARK_BOOTS, Items.DARK_ESSENCE);
+        RegistryRecipeProvider.offerAxeRecipe(exporter, DarkenDepthsItems.DARK_AXE, DarkenDepthsItems.DARK_ESSENCE);
+        RegistryRecipeProvider.offerHoeRecipe(exporter, DarkenDepthsItems.DARK_HOE, DarkenDepthsItems.DARK_ESSENCE);
+        RegistryRecipeProvider.offerPickaxeRecipe(exporter, DarkenDepthsItems.DARK_PICKAXE, DarkenDepthsItems.DARK_ESSENCE);
+        RegistryRecipeProvider.offerShovelRecipe(exporter, DarkenDepthsItems.DARK_SHOVEL, DarkenDepthsItems.DARK_ESSENCE);
+        RegistryRecipeProvider.offerSwordRecipe(exporter, DarkenDepthsItems.DARK_SWORD, DarkenDepthsItems.DARK_ESSENCE);
+        RegistryRecipeProvider.offerHelmetRecipe(exporter, DarkenDepthsItems.DARK_HELMET, DarkenDepthsItems.DARK_ESSENCE);
+        RegistryRecipeProvider.offerChestplateRecipe(exporter, DarkenDepthsItems.DARK_CHESTPLATE, DarkenDepthsItems.DARK_ESSENCE);
+        RegistryRecipeProvider.offerLeggingsRecipe(exporter, DarkenDepthsItems.DARK_LEGGINGS, DarkenDepthsItems.DARK_ESSENCE);
+        RegistryRecipeProvider.offerBootsRecipe(exporter, DarkenDepthsItems.DARK_BOOTS, DarkenDepthsItems.DARK_ESSENCE);
 
     }
 }
