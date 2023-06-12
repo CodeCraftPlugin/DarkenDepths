@@ -22,7 +22,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
           tag_name: ${{ steps.build.outputs.version }}
-          release_name: Release Darken Depths ${{ steps.build.outputs.version }}
+          release_name: Release darkendepths-${{ steps.build.outputs.version }}
       - name: Upload Release Asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
@@ -38,14 +38,7 @@ jobs:
         with:
           file_path: "build/libs/darkendepths-${{ steps.build.outputs.version }}.jar"
           game_endpoint: "minecraft"
-          relations: "fabric-api:requiredDependency,registry-lib:requiredDependency,modmenu:optionalDependency"
+          relations: "fabric-api:requiredDependency,modmenu:optionalDependency,registry-lib:requiredDependency"
           token: ${{ secrets.CF_API_TOKEN }}
           game_version: "Minecraft 1.19:1.19.4,Java 17,Fabric,Client,Server"
-          release_type: "beta"
-          project_id: "873396"
-
-#      - name: "Upload To Modrinth"
-#        id: upload-modrinth
-#        uses: Kir-Antipov/mc-publish@v3.3
-#        modrinth-id: AANobbMI
-#        modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          project_id: "776484"
