@@ -12,6 +12,8 @@ public class DarkenDepthsBlocks {
 
     public static final Block DARKENED_STONE_ORE = Registry.registerBlocks("darkened_stone_ore", DarkenDepths.MOD_ID,
             new Block(FabricBlockSettings.of(Material.STONE, MapColor.BLACK).strength(1.5f, 6.0f).requiresTool()), DarkenDepthsGroupItems.DARKEN_DEPTHS_GROUP);
+    public static final Block DEEPSLATE_DARKENED_STONE_ORE = Registry.registerBlocks("deepslate_darkened_stone_ore", DarkenDepths.MOD_ID,
+            new Block(FabricBlockSettings.of(Material.STONE, MapColor.BLACK).strength(2.5f, 8.0f).requiresTool()), DarkenDepthsGroupItems.DARKEN_DEPTHS_GROUP);
 
 
 

@@ -12,6 +12,10 @@ public class DarkenDepthsBlockLootTablesGenerator extends FabricBlockLootTablePr
 
     @Override
     public void generate() {
-        addDrop(DarkenDepthsBlocks.DARKENED_STONE_ORE, DarkenDepthsItems.DARK_ESSENCE);
+        addDrop(DarkenDepthsBlocks.DARKENED_STONE_ORE,oreDrops(DarkenDepthsBlocks.DARKENED_STONE_ORE,DarkenDepthsItems.DARK_ESSENCE));
+        addDrop(DarkenDepthsBlocks.DEEPSLATE_DARKENED_STONE_ORE,oreDrops(DarkenDepthsBlocks.DEEPSLATE_DARKENED_STONE_ORE,DarkenDepthsItems.DARK_ESSENCE));
+
+
     }
+
 }

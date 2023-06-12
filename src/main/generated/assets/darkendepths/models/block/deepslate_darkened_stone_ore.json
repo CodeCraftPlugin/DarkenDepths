@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "darkendepths:block/deepslate_darkened_stone_ore"
+  }
+}

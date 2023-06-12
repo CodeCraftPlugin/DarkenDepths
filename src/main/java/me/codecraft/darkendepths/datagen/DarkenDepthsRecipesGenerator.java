@@ -8,11 +8,11 @@ import net.minecraft.data.server.recipe.RecipeJsonProvider;
 
 import java.util.function.Consumer;
 
-public class DarkenDepthsRecipesGenrator extends FabricRecipeProvider {
+public class DarkenDepthsRecipesGenerator extends FabricRecipeProvider {
 
 
 
-    public DarkenDepthsRecipesGenrator(FabricDataOutput output) {
+    public DarkenDepthsRecipesGenerator(FabricDataOutput output) {
         super(output);
     }
     @Override

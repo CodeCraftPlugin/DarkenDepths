@@ -8,20 +8,20 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 
-public class DarkenDepthsModelsDatagen extends FabricModelProvider {
-    public DarkenDepthsModelsDatagen(FabricDataOutput output) {
+public class DarkenDepthsModelsGenerator extends FabricModelProvider {
+    public DarkenDepthsModelsGenerator(FabricDataOutput output) {
         super(output);
     }
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(DarkenDepthsBlocks.DARKENED_STONE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(DarkenDepthsBlocks.DEEPSLATE_DARKENED_STONE_ORE);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(DarkenDepthsItems.SHADOW_STONE, Models.GENERATED);
-//        itemModelGenerator.register(Blocks.DARKENED_STONE_ORE.asItem(), Models.GENERATED);
         itemModelGenerator.register(DarkenDepthsItems.DARK_ESSENCE, Models.GENERATED);
         itemModelGenerator.register(DarkenDepthsItems.DARK_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(DarkenDepthsItems.DARK_SWORD, Models.HANDHELD);

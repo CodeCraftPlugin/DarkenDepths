@@ -15,6 +15,7 @@ import java.util.concurrent.CompletableFuture;
 public class DarkenDepthsBlockMiningLevelGenerator extends FabricTagProvider.BlockTagProvider {
 
     private static final TagKey<Block> MINEABLE_PICKAXE = TagKey.of(RegistryKey.ofRegistry(new Identifier("minecraft:mineable/pickaxe")), new Identifier("minecraft:mineable/pickaxe"));
+    private static final TagKey<Block>  NEED_TOOL_LEVEL_3= TagKey.of(RegistryKey.ofRegistry(new Identifier("fabric:needs_tool_level_3")), new Identifier("fabric:needs_tool_level_3"));
 
     public DarkenDepthsBlockMiningLevelGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
@@ -24,5 +25,8 @@ public class DarkenDepthsBlockMiningLevelGenerator extends FabricTagProvider.Blo
     protected void configure(RegistryWrapper.WrapperLookup arg) {
 
         getOrCreateTagBuilder(MINEABLE_PICKAXE).add(DarkenDepthsBlocks.DARKENED_STONE_ORE);
+        getOrCreateTagBuilder(MINEABLE_PICKAXE).add(DarkenDepthsBlocks.DEEPSLATE_DARKENED_STONE_ORE);
+        getOrCreateTagBuilder(NEED_TOOL_LEVEL_3).add(DarkenDepthsBlocks.DARKENED_STONE_ORE);
+        getOrCreateTagBuilder(NEED_TOOL_LEVEL_3).add(DarkenDepthsBlocks.DEEPSLATE_DARKENED_STONE_ORE);
     }
 }
