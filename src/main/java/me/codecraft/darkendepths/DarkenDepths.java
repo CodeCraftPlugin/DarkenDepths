@@ -5,6 +5,9 @@ import me.codecraft.darkendepths.item.DarkenDepthsGroupItems;
 import me.codecraft.darkendepths.item.DarkenDepthsItems;
 import me.codecraft.darkendepths.world.gen.DarkenDepthsWorldGeneration;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.registry.BuiltinRegistries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 
 public class DarkenDepths implements ModInitializer {
 

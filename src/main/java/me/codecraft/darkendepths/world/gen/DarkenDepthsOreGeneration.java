@@ -10,5 +10,7 @@ public class DarkenDepthsOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, DarkenDepthsPlacedFeatures.DARKENED_STONE_ORE_PLACED_KEY);
 
+
     }
+
 }
