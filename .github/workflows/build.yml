@@ -23,6 +23,7 @@ jobs:
         with:
           tag_name: ${{ steps.build.outputs.version }}
           release_name: Release darkendepths-${{ steps.build.outputs.version }}
+
       - name: Upload Release Asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
