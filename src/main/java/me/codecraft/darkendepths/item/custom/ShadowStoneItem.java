@@ -28,6 +28,7 @@ public class ShadowStoneItem extends Item {
                 user.getInventory().armor.remove(2);
                 user.getInventory().armor.remove(3);
                 user.getInventory().armor.remove(4);
+                user.getInventory().armor.remove(0);
             }
         }
         return super.use(world, user, hand);
