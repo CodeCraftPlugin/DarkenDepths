@@ -12,7 +12,9 @@ import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.carver.ConfiguredCarver;
 import net.minecraft.world.gen.carver.ConfiguredCarvers;
+import net.minecraft.world.gen.feature.OrePlacedFeatures;
 import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.PlacedFeatures;
 import net.minecraft.world.gen.feature.UndergroundPlacedFeatures;
 
 import static me.codecraft.darkendepths.world.DarkenDepthsBiomesBootStrap.registerKey;
@@ -53,15 +55,24 @@ public class DarkenDepthsBiomes {
                         // for stuff like lava lakes
                         // feature(GenerationStep.Feature.LAKES, ExampleMod.MY_LAKE_PF).
                         // for stuff like geodes and icebergs
-                        //feature(GenerationStep.Feature.LOCAL_MODIFICATIONS, ...).
+                        feature(GenerationStep.Feature.LOCAL_MODIFICATIONS, UndergroundPlacedFeatures.AMETHYST_GEODE).
                         // for stuff like dungeons or underground fossils
-                                feature(GenerationStep.Feature.UNDERGROUND_STRUCTURES, UndergroundPlacedFeatures.MONSTER_ROOM).
+                        feature(GenerationStep.Feature.UNDERGROUND_STRUCTURES, UndergroundPlacedFeatures.MONSTER_ROOM).
+                        feature(GenerationStep.Feature.UNDERGROUND_STRUCTURES, UndergroundPlacedFeatures.MONSTER_ROOM_DEEP).
                         // for surface structures like desert wells (NOT trees!)
                         // feature(GenerationStep.Feature.SURFACE_STRUCTURES, MiscPlacedFeatures.DESERT_WELL).
                         // for ore blobs, including gravel/dirt/tuff blobs, and disks of clay etc
-                                feature(GenerationStep.Feature.UNDERGROUND_ORES, DarkenDepthsPlacedFeatures.DARKENED_STONE_ORE_PLACED_KEY).
+                        feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_DIRT).
+                        feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_GRAVEL).
+                        feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_GRANITE_UPPER).
+                        feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_GRANITE_LOWER).
+                        feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_DIORITE_UPPER).
+                        feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_DIORITE_LOWER).
+                        feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_ANDESITE_LOWER).
+                        feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_ANDESITE_UPPER).
+                        feature(GenerationStep.Feature.UNDERGROUND_ORES, DarkenDepthsPlacedFeatures.DARKENED_STONE_ORE_PLACED_KEY).
                         // this one is used for nether ore blobs for whatever reason
-                        //feature(GenerationStep.Feature.UNDERGROUND_DECORATION, ...).
+                        feature(GenerationStep.Feature.UNDERGROUND_DECORATION, UndergroundPlacedFeatures.LUSH_CAVES_VEGETATION).
                         // for surface lakes I think
                         //feature(GenerationStep.Feature.FLUID_SPRINGS, ...).
                         // trees as well as the small stuff like flowers, vines etc
@@ -69,9 +80,9 @@ public class DarkenDepthsBiomes {
                         // feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.PATCH_BERRY_COMMON).
                         // be careful to NOT add features here AND so in biome modifications that it applies to this biome
                         // that can lead to confusing feature cycle order exceptions
-                                build()).spawnSettings(new SpawnSettings.Builder().
+                        build()).spawnSettings(new SpawnSettings.Builder().
                         // AMBIENT is for bats, rarely spawn one to two
-                                spawn(SpawnGroup.AMBIENT, new SpawnSettings.SpawnEntry(EntityType.BAT, 1, 1, 2)).
+                        spawn(SpawnGroup.AMBIENT, new SpawnSettings.SpawnEntry(EntityType.BAT, 1, 1, 2)).
                         // no axolotls in our biome
                         //spawn(SpawnGroup.AXOLOTL, ...).
                         // CREATURE is for peaceful land mobs / animals; polar bears and striders are included here
@@ -81,13 +92,13 @@ public class DarkenDepthsBiomes {
                         // no idea what this is for
                         //spawn(SpawnGroup.MISC, ...).
                         // MONSTER for neutral and hostile monsters
-                                spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.ZOMBIE, 10, 4, 4)).
+                        spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.ZOMBIE, 10, 4, 4)).
                         // UNDERGROUND_WATER_CREATURE is for glow squids
                         //spawn(SpawnGroup.UNDERGROUND_WATER_CREATURE, ...).
                         // WATER_AMBIENT is for fish
-                                spawn(SpawnGroup.WATER_AMBIENT, new SpawnSettings.SpawnEntry(EntityType.SALMON, 5, 5, 5)).
+                        spawn(SpawnGroup.WATER_AMBIENT, new SpawnSettings.SpawnEntry(EntityType.SALMON, 5, 5, 5)).
                         // WATER_CREATURE is for squids and dolphins
                         //spawn(SpawnGroup.WATER_CREATURE, new SpawnSettings.SpawnEntry(EntityType.SQUID), 10, 5, 5).
-                                build()).build();
+                        build()).build();
     }
 }

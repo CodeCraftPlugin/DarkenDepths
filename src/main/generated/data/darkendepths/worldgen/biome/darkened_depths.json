@@ -18,14 +18,28 @@
   "features": [
     [],
     [],
-    [],
     [
-      "minecraft:monster_room"
+      "minecraft:amethyst_geode"
+    ],
+    [
+      "minecraft:monster_room",
+      "minecraft:monster_room_deep"
     ],
     [],
     [],
     [
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_granite_upper",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_andesite_upper",
       "darkendepths:darkened_stone_ore_placed"
+    ],
+    [
+      "minecraft:lush_caves_vegetation"
     ]
   ],
   "has_precipitation": true,

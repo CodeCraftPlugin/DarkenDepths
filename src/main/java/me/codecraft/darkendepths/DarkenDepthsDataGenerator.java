@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.world.gen.feature.OrePlacedFeatures;
 import org.jetbrains.annotations.Nullable;
 
 public class DarkenDepthsDataGenerator implements DataGeneratorEntrypoint {
@@ -23,13 +24,14 @@ public class DarkenDepthsDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(DarkenDepthsBlockLootTablesGenerator::new);
         pack.addProvider(DarkenDepthsBlockMiningLevelGenerator::new);
         pack.addProvider(DarkenDepthsWorldGenerator::new);
-        pack.addProvider(DarkenDepthsBiomesGenerator::new);
+//        pack.addProvider(DarkenDepthsBiomesGenerator::new);
     }
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, DarkenDepthsConfiguredFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, DarkenDepthsPlacedFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.BIOME, DarkenDepthsBiomesBootStrap::bootstrap);
+//        OrePlacedFeatures.
     }
 
     @Override
