@@ -23,6 +23,9 @@
     ],
     "main": [
       "me.codecraft.darkendepths.DarkenDepths"
+    ],
+    "terrablender": [
+      "me.codecraft.darkendepths.DarkenDepthsTerrablenderApi"
     ]
   },
   "mixins": [

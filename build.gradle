@@ -13,6 +13,7 @@ repositories {
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.'
     mavenCentral()
+    maven { url = 'https://maven.minecraftforge.net/' }
 //    maven {url "D:/mod/Fabric/registry-lib/build/repos/releases"}
 
 }
@@ -50,6 +51,8 @@ dependencies {
         // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "io.github.codecraftplugin:registry-lib:${project.registery_lib_version}"
+    modImplementation "com.github.glitchfiend:TerraBlender-fabric:${project.terra_blender_version}"
+
     }
 
 processResources {

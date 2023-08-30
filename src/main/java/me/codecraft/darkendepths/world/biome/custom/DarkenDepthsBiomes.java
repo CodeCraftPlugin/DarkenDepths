@@ -70,9 +70,9 @@ public class DarkenDepthsBiomes {
                         feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_DIORITE_LOWER).
                         feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_ANDESITE_LOWER).
                         feature(GenerationStep.Feature.UNDERGROUND_ORES, OrePlacedFeatures.ORE_ANDESITE_UPPER).
-                        feature(GenerationStep.Feature.UNDERGROUND_ORES, DarkenDepthsPlacedFeatures.DARKENED_STONE_ORE_PLACED_KEY).
+//                        feature(GenerationStep.Feature.UNDERGROUND_ORES, ).
                         // this one is used for nether ore blobs for whatever reason
-                        feature(GenerationStep.Feature.UNDERGROUND_DECORATION, UndergroundPlacedFeatures.LUSH_CAVES_VEGETATION).
+                        feature(GenerationStep.Feature.UNDERGROUND_DECORATION, DarkenDepthsPlacedFeatures.DARKENED_STONE_ORE_PLACED_KEY).
                         // for surface lakes I think
                         //feature(GenerationStep.Feature.FLUID_SPRINGS, ...).
                         // trees as well as the small stuff like flowers, vines etc
