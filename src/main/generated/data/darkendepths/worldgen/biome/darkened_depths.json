@@ -1,78 +1,35 @@
 {
-  "carvers": {
-    "air": [
-      "minecraft:cave",
-      "minecraft:cave_extra_underground",
-      "minecraft:canyon"
-    ]
-  },
-  "downfall": 0.8,
+  "carvers": {},
+  "downfall": 0.9,
   "effects": {
-    "fog_color": 1936563,
-    "foliage_color": 10474138,
-    "grass_color": 5279306,
-    "sky_color": 2341614,
-    "water_color": 6130396,
-    "water_fog_color": 10132178
+    "fog_color": 12638463,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 8103167,
+    "water_color": 4159204,
+    "water_fog_color": 329011
   },
-  "features": [
-    [],
-    [],
+  "features":
+  [
     [
-      "minecraft:amethyst_geode"
-    ],
-    [
-      "minecraft:monster_room",
-      "minecraft:monster_room_deep"
-    ],
-    [],
-    [],
-    [
-      "minecraft:ore_dirt",
-      "minecraft:ore_gravel",
-      "minecraft:ore_granite_upper",
-      "minecraft:ore_granite_lower",
-      "minecraft:ore_diorite_upper",
-      "minecraft:ore_diorite_lower",
-      "minecraft:ore_andesite_lower",
-      "minecraft:ore_andesite_upper"
-    ],
-    [
-      "darkendepths:darkened_stone_ore_placed"
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
-    "ambient": [
-      {
-        "type": "minecraft:bat",
-        "maxCount": 2,
-        "minCount": 1,
-        "weight": 1
-      }
-    ],
+    "ambient": [],
     "axolotls": [],
     "creature": [],
     "misc": [],
-    "monster": [
-      {
-        "type": "minecraft:zombie",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      }
-    ],
+    "monster": [],
     "underground_water_creature": [],
-    "water_ambient": [
-      {
-        "type": "minecraft:salmon",
-        "maxCount": 5,
-        "minCount": 5,
-        "weight": 5
-      }
-    ],
+    "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.5
+  "temperature": -0.7
 }

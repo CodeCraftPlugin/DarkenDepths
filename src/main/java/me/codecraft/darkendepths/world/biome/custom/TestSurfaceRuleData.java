@@ -35,7 +35,7 @@ public class TestSurfaceRuleData
 
         return MaterialRules.sequence(
             MaterialRules.condition(MaterialRules.biome(TestBiomes.HOT_RED), RED_TERRACOTTA),
-//            MaterialRules.condition(MaterialRules.biome(TestBiomes.COLD_BLUE), BLUE_TERRACOTTA),
+            MaterialRules.condition(MaterialRules.biome(TestBiomes.COLD_BLUE), BLUE_TERRACOTTA),
 
             // Default to a grass and dirt surface
             MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)

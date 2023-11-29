@@ -2,6 +2,7 @@ package me.codecraft.darkendepths.world;
 
 import me.codecraft.darkendepths.DarkenDepths;
 import me.codecraft.darkendepths.world.biome.custom.DarkenDepthsBiomes;
+import me.codecraft.darkendepths.world.biome.custom.TestBiomes;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;

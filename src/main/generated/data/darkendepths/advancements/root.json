@@ -33,5 +33,6 @@
     [
       "has_dark_essence"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

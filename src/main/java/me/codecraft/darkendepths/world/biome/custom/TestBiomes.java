@@ -24,13 +24,12 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 
+import static me.codecraft.darkendepths.world.DarkenDepthsBiomesBootStrap.registerKey;
+
 public class TestBiomes
 {
-    public static final RegistryKey<Biome> HOT_RED = register("hot_red");
-//    public static final RegistryKey<Biome> COLD_BLUE = register("cold_blue");
+    public static final RegistryKey<Biome> HOT_RED = registerKey("hot_red");
+    public static final RegistryKey<Biome> COLD_BLUE = registerKey("cold_blue");
 
-    private static RegistryKey<Biome> register(String name)
-    {
-        return RegistryKey.of(RegistryKeys.BIOME, new Identifier(DarkenDepths.MOD_ID, name));
-    }
+
 }
