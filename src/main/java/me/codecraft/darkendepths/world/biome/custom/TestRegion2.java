@@ -37,13 +37,12 @@ public class TestRegion2 extends Region
     }
 
     @Override
-    public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper)
-    {
-        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder  -> {
+    public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
+        this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
             // Simple example:
             // Replace the Vanilla desert with our hot_red biome
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.DESERT, TestBiomes.HOT_RED);
-//            super.addBiomes(registry, mapper);
+            builder.replaceBiome(BiomeKeys.DESERT, TestBiomes.HOT_RED);
         });
+        super.addBiomes(registry, mapper);
     }
 }
