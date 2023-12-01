@@ -3,6 +3,7 @@ package me.codecraft.darkendepths.advancements;
 import me.codecraft.darkendepths.DarkenDepths;
 import me.codecraft.darkendepths.item.DarkenDepthsItems;
 import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.AdvancementRewards;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
@@ -11,10 +12,10 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Consumer;
 
-public class DarkenDepthsAdvancement implements Consumer<Consumer<Advancement>> {
-    @Override
-    public void accept(Consumer<Advancement> advancementConsumer) {
-        Advancement root = Advancement.Builder.create().display(
+public class DarkenDepthsAdvancement {
+
+    public void accept(Consumer<AdvancementEntry> advancementConsumer) {
+        AdvancementEntry root = Advancement.Builder.create().display(
                         DarkenDepthsItems.DARK_ESSENCE, // The display icon
                         Text.literal("DarkenDepths"), // The title
                         Text.literal("DarkenDepths"),// The description
@@ -25,7 +26,7 @@ public class DarkenDepthsAdvancement implements Consumer<Consumer<Advancement>> 
                         false
                 ).criterion("has_dark_essence", InventoryChangedCriterion.Conditions.items(DarkenDepthsItems.DARK_ESSENCE))
                 .build(advancementConsumer, DarkenDepths.MOD_ID+":root");
-        Advancement got_full_armor = Advancement.Builder.create()
+        AdvancementEntry got_full_armor = Advancement.Builder.create()
                 .display(
                         DarkenDepthsItems.DARK_CHESTPLATE, // The display icon
                         Text.literal("Cover me With Darkness"), // The title

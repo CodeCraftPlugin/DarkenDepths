@@ -27,7 +27,7 @@ import net.minecraft.world.biome.Biome;
 public class TestBiomes
 {
     public static final RegistryKey<Biome> HOT_RED = register("hot_red");
-//    public static final RegistryKey<Biome> COLD_BLUE = register("cold_blue");
+    public static final RegistryKey<Biome> COLD_BLUE = register("cold_blue");
 
     private static RegistryKey<Biome> register(String name)
     {

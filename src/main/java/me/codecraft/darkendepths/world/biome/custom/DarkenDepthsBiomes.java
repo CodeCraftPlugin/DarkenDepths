@@ -14,13 +14,12 @@ import net.minecraft.world.gen.carver.ConfiguredCarver;
 import net.minecraft.world.gen.carver.ConfiguredCarvers;
 import net.minecraft.world.gen.feature.OrePlacedFeatures;
 import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.feature.PlacedFeatures;
 import net.minecraft.world.gen.feature.UndergroundPlacedFeatures;
 
 import static me.codecraft.darkendepths.world.DarkenDepthsBiomesBootStrap.registerKey;
 
 public class DarkenDepthsBiomes {
-    public static final RegistryKey<Biome> DARKENED_DEPTHS_KEY = registerKey("darkened_depths");
+    public static final RegistryKey<Biome> DARKENED_DEPTHS = registerKey("darkened_depths");
 
     public static Biome createDarkenDepths(RegistryEntryLookup<PlacedFeature> placedFeatureLookup, RegistryEntryLookup<ConfiguredCarver<?>> configuredCarverLookup) {
         return new Biome.Builder()

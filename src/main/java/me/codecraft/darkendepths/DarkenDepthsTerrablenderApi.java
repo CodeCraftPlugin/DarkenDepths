@@ -15,10 +15,10 @@ public class DarkenDepthsTerrablenderApi implements TerraBlenderApi {
     public void onTerraBlenderInitialized() {
         System.out.println("Darken Depths TerraBlender API initialized");
             // Weights are kept intentionally low as we add minimal biomes
-//            Regions.register(new TestRegion1(new Identifier(MOD_ID, "overworld_1"), 2));
-            Regions.register(new TestRegion2(new Identifier(MOD_ID, "overworld_2"), 2));
+            Regions.register(new TestRegion1(new Identifier(MOD_ID, "overworld_1"), 10));
+            Regions.register(new TestRegion2(new Identifier(MOD_ID, "overworld_2"), 12));
 
             // Register our surface rules
-            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, TestSurfaceRuleData.makeRules());
+//            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, TestSurfaceRuleData.makeRules());
     }
 }

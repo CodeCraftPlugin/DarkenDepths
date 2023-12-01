@@ -31,7 +31,7 @@ public class DarkenDepthsDataGenerator implements DataGeneratorEntrypoint {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, DarkenDepthsConfiguredFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, DarkenDepthsPlacedFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.BIOME, DarkenDepthsBiomesBootStrap::bootstrap);
-//        OrePlacedFeatures.
+//        OrePlacedFeatures
     }
 
     @Override

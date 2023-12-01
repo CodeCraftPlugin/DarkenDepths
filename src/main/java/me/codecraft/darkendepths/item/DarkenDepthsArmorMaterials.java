@@ -23,8 +23,8 @@ public enum DarkenDepthsArmorMaterials implements StringIdentifiable, ArmorMater
         return Ingredient.ofItems(DarkenDepthsItems.DARK_ESSENCE);
     });
 
-    public static final StringIdentifiable.Codec<DarkenDepthsArmorMaterials> CODEC = StringIdentifiable.createCodec(DarkenDepthsArmorMaterials::values);
-    private static final EnumMap<ArmorItem.Type, Integer> BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    public static final StringIdentifiable.EnumCodec<DarkenDepthsArmorMaterials> CODEC = StringIdentifiable.createCodec(DarkenDepthsArmorMaterials::values);
+    private static final EnumMap BASE_DURABILITY = Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 13);
         map.put(Type.LEGGINGS, 15);
         map.put(Type.CHESTPLATE, 16);
