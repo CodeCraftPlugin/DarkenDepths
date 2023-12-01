@@ -17,16 +17,19 @@
  */
 package me.codecraft.darkendepths.world.biome.custom;
 
+import me.codecraft.darkendepths.blocks.DarkenDepthsBlocks;
+import me.codecraft.darkendepths.world.DarkenDepthsBiomes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.gen.surfacebuilder.MaterialRules;
 
-public class TestSurfaceRuleData
+public class DarkenDepthSurfaceRuleData
 {
     private static final MaterialRules.MaterialRule DIRT = makeStateRule(Blocks.DIRT);
     private static final MaterialRules.MaterialRule GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
     private static final MaterialRules.MaterialRule RED_TERRACOTTA = makeStateRule(Blocks.RED_TERRACOTTA);
     private static final MaterialRules.MaterialRule BLUE_TERRACOTTA = makeStateRule(Blocks.BLUE_TERRACOTTA);
+    private static final MaterialRules.MaterialRule TEST = makeStateRule(DarkenDepthsBlocks.DARKENED_STONE_ORE);
 
     public static MaterialRules.MaterialRule makeRules()
     {
@@ -34,15 +37,16 @@ public class TestSurfaceRuleData
         MaterialRules.MaterialRule grassSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, GRASS_BLOCK), DIRT);
 
         return MaterialRules.sequence(
-            MaterialRules.condition(MaterialRules.biome(TestBiomes.HOT_RED), RED_TERRACOTTA),
-            MaterialRules.condition(MaterialRules.biome(TestBiomes.COLD_BLUE),BLUE_TERRACOTTA ),
+            MaterialRules.condition(MaterialRules.biome(DarkenDepthsBiomes.HOT_RED), RED_TERRACOTTA),
+            MaterialRules.condition(MaterialRules.biome(DarkenDepthsBiomes.DARKENED_DEPTHS),BLUE_TERRACOTTA ),
+            MaterialRules.condition(MaterialRules.biome(DarkenDepthsBiomes.DARKENED_DEPTHS),TEST),
 
             // Default to a grass and dirt surface
             MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)
         );
     }
 
-    private static MaterialRules.MaterialRule makeStateRule(Block block)
+    private static MaterialRules.MaterialRule makeStateRule(Block  block)
     {
         return MaterialRules.block(block.getDefaultState());
     }

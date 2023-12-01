@@ -18,6 +18,7 @@
 package me.codecraft.darkendepths.world.biome.custom;
 
 import com.mojang.datafixers.util.Pair;
+import me.codecraft.darkendepths.world.DarkenDepthsBiomes;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
@@ -41,7 +42,7 @@ public class TestRegion2 extends Region
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
             // Simple example:
             // Replace the Vanilla desert with our hot_red biome
-            builder.replaceBiome(BiomeKeys.DESERT, TestBiomes.HOT_RED);
+            builder.replaceBiome(BiomeKeys.DESERT, DarkenDepthsBiomes.HOT_RED);
         });
         super.addBiomes(registry, mapper);
     }

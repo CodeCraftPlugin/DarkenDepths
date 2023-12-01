@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package me.codecraft.darkendepths.world.biome.custom;
+package me.codecraft.darkendepths.world;
 
 
 import me.codecraft.darkendepths.DarkenDepths;
@@ -24,11 +24,11 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 
-public class TestBiomes
+public class DarkenDepthsBiomes
 {
     public static final RegistryKey<Biome> HOT_RED = register("hot_red");
     public static final RegistryKey<Biome> COLD_BLUE = register("cold_blue");
-
+    public static final RegistryKey<Biome> DARKENED_DEPTHS = register("darkened_depths");
     private static RegistryKey<Biome> register(String name)
     {
         return RegistryKey.of(RegistryKeys.BIOME, new Identifier(DarkenDepths.MOD_ID, name));

@@ -18,6 +18,7 @@
 package me.codecraft.darkendepths.world.biome.custom;
 
 import com.mojang.datafixers.util.Pair;
+import me.codecraft.darkendepths.world.DarkenDepthsBiomes;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
@@ -50,7 +51,7 @@ public class TestRegion1 extends Region
                 .erosion(Erosion.EROSION_0, Erosion.EROSION_1)
                 .depth(Depth.SURFACE, Depth.FLOOR)
                 .weirdness(Weirdness.MID_SLICE_NORMAL_ASCENDING, Weirdness.MID_SLICE_NORMAL_DESCENDING)
-                .build().forEach(point -> builder.add(point, TestBiomes.COLD_BLUE));
+                .build().forEach(point -> builder.add(point, DarkenDepthsBiomes.COLD_BLUE));
 
         // Add our points to the mapper
         builder.build().forEach(mapper::accept);
