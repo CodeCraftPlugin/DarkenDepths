@@ -4,6 +4,7 @@
   "package": "me.codecraft.darkendepths.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "PlayerEntityMixin"
   ],
   "client": [
   ],

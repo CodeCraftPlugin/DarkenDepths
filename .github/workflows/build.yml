@@ -15,25 +15,29 @@ jobs:
         id: build,
         run: "chmod +x gradlew && ./gradlew build",
       }
-#      - name: Create Release
-#        id: create_release
-#        uses: actions/create-release@v1
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-#        with:
-#          tag_name: ${{ steps.build.outputs.version }}
-#          release_name: Release Darken Depths ${{ steps.build.outputs.version }}
-#
-#      - name: Upload Release Asset
-#        id: upload-release-asset
-#        uses: actions/upload-release-asset@v1
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        with:
-#          upload_url: ${{ steps.create_release.outputs.upload_url }}
-#          asset_path: "build/libs/darkendepths-${{ steps.build.outputs.version }}.jar"
-#          asset_name: "darkendepths-${{ steps.build.outputs.version }}.jar"
-#          asset_content_type: application/java-archive
+      - name: Generate Changelog
+        id: changelog
+        run: echo "::set-output name=changelog::$(git log --pretty=format:"%h %s" -1)"
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ steps.build.outputs.version }}
+          release_name: Release Darken Depths ${{ steps.build.outputs.version }}
+
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: "build/libs/darkendepths-${{ steps.build.outputs.version }}.jar"
+          asset_name: "darkendepths-${{ steps.build.outputs.version }}.jar"
+          asset_content_type: application/java-archive
       - name: mc-publish
         uses: Kir-Antipov/mc-publish@v3.2
         with:
@@ -43,8 +47,7 @@ jobs:
           name: Darken Depths 1.20.2-1.0.0
           version: ${{ steps.build.outputs.version }}
           version-type: beta
-          changelog: "added biomes though they are just random stuff I was trying out
-          also updated to 1.20.2 next release will have the biomes all done"
+          changelog: "${{steps.build.outputs.changelog}}"
           game-version: 1.20.2
           loaders: fabric
           dependencies:

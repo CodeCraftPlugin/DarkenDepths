@@ -34,7 +34,7 @@ public class DarkenDepthsConfiguredFeatures {
                         OreFeatureConfig.createTarget(deepslateReplaceables, DarkenDepthsBlocks.DEEPSLATE_DARKENED_STONE_ORE.getDefaultState()));
 
 
-        register(context, DARKENED_STONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldDarkenedStoneOres, 12));
+        register(context, DARKENED_STONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldDarkenedStoneOres, 16));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
