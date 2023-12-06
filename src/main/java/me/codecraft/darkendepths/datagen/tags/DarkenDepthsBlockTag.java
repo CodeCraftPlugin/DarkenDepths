@@ -1,6 +1,5 @@
 package me.codecraft.darkendepths.datagen.tags;
 
-import me.codecraft.darkendepths.DarkenDepths;
 import me.codecraft.darkendepths.blocks.DarkenDepthsBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -12,12 +11,12 @@ import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 
-public class DarkenDepthsBlockMiningLevelGenerator extends FabricTagProvider.BlockTagProvider {
+public class DarkenDepthsBlockTag extends FabricTagProvider.BlockTagProvider {
 
     private static final TagKey<Block> MINEABLE_PICKAXE = TagKey.of(RegistryKey.ofRegistry(new Identifier("minecraft:mineable/pickaxe")), new Identifier("minecraft:mineable/pickaxe"));
     private static final TagKey<Block>  NEED_TOOL_LEVEL_3= TagKey.of(RegistryKey.ofRegistry(new Identifier("fabric:needs_tool_level_3")), new Identifier("fabric:needs_tool_level_3"));
 
-    public DarkenDepthsBlockMiningLevelGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    public DarkenDepthsBlockTag(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 

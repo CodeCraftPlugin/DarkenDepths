@@ -12,5 +12,6 @@
   "item.darkendepths.dark_pickaxe": "§5§lDarkened Pickaxe",
   "item.darkendepths.dark_shovel": "§5§lDarkened Shovel",
   "item.darkendepths.dark_sword": "§5§lDarkened Sword",
-  "item.darkendepths.shadow_stone": "Shadow Stone"
+  "item.darkendepths.shadow_stone": "Shadow Stone",
+  "screen.darkendepths.shadowstone_inventory": "Shadow's Inventory"
 }

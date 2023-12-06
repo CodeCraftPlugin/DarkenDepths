@@ -3,6 +3,8 @@ package me.codecraft.darkendepths.datagen;
 import me.codecraft.darkendepths.DarkenDepths;
 import me.codecraft.darkendepths.blocks.DarkenDepthsBlocks;
 import me.codecraft.darkendepths.item.DarkenDepthsItems;
+import me.codecraft.darkendepths.status_effects.DarkenDepthsStatusEffect;
+import me.codecraft.darkendepths.status_effects.DarkenDepthsStatusEffects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -14,6 +16,7 @@ public class DarkenDepthsLangGenerator extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(DarkenDepthsItems.SHADOW_STONE, "Shadow Stone");
+        translationBuilder.add(DarkenDepthsItems.DARKSHADOW_CORE, "DarkShadow's Core");
         translationBuilder.add(DarkenDepthsBlocks.DARKENED_STONE_ORE, "§5Darkened Stone Ore");
         translationBuilder.add(DarkenDepthsBlocks.DEEPSLATE_DARKENED_STONE_ORE, "§5Deepslate Darkened Stone Ore");
         translationBuilder.add(DarkenDepthsItems.DARK_ESSENCE, "§5§lDark Essence");
@@ -27,6 +30,8 @@ public class DarkenDepthsLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(DarkenDepthsItems.DARK_LEGGINGS, "§5§lDarkened Leggings");
         translationBuilder.add(DarkenDepthsItems.DARK_BOOTS, "§5§lDarkened Boots");
         translationBuilder.add(DarkenDepths.MOD_ID+".advancement.get_darkness_armor", "Get Full Darkened Armor");
+        translationBuilder.add("screen.darkendepths.shadowstone_inventory","Shadow's Inventory");
+        translationBuilder.add(DarkenDepthsStatusEffects.SHADOW_PROTECTION,"Shadow's Protection");
     }
 }
 

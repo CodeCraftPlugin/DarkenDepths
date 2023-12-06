@@ -113,7 +113,12 @@ publishing {
         // The repositories here will be used for publishing your artifact, not for
         // retrieving dependencies.
     }
+
+
+}
+
+if (!System.properties['os.name'].toLowerCase().contains('windows')) {
     exec {
-        commandLine "echo", "##[set-output name=version;]${project.version}";
+        commandLine "echo", "##[set-output name=version;]${project.version}"
     }
 }

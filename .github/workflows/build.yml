@@ -44,10 +44,10 @@ jobs:
           modrinth-id: walrejrR
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           modrinth-files: "build/libs/darkendepths-${{ steps.build.outputs.version }}.jar"
-          name: Darken Depths 1.20.2-1.0.0
+          name: "Darken Depths ${{ steps.build.outputs.version }}"
           version: ${{ steps.build.outputs.version }}
           version-type: beta
-          changelog: "${{steps.build.outputs.changelog}}"
+          changelog: ${{steps.build.outputs.changelog}}
           game-version: 1.20.2
           loaders: fabric
           dependencies:
