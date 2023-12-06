@@ -20,12 +20,17 @@ import java.util.List;
 public class DarkenDepthsPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> DARKENED_STONE_ORE_PLACED_KEY = registerKey("darkened_stone_ore_placed");
+    public static final RegistryKey<PlacedFeature> SMALL_DARKENED_STONE_ORE_PLACED_KEY = registerKey("small_darkened_stone_ore_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, DARKENED_STONE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(DarkenDepthsConfiguredFeatures.DARKENED_STONE_ORE_KEY),
-                DarkenDepthsOrePlacement.modifiersWithCount(16, // Veins per Chunk
+                DarkenDepthsOrePlacement.modifiersWithCount(20, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+
+        register(context, SMALL_DARKENED_STONE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(DarkenDepthsConfiguredFeatures.DARKENED_STONE_ORE_KEY),
+                DarkenDepthsOrePlacement.modifiersWithCount(12, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
     }
 
