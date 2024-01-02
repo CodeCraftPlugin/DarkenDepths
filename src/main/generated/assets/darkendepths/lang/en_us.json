@@ -2,6 +2,7 @@
   "block.darkendepths.darkened_stone_ore": "§5Darkened Stone Ore",
   "block.darkendepths.deepslate_darkened_stone_ore": "§5Deepslate Darkened Stone Ore",
   "darkendepths.advancement.get_darkness_armor": "Get Full Darkened Armor",
+  "effect.darkendepths.shadow_protection": "Shadow's Protection",
   "item.darkendepths.dark_axe": "§5§lDarkened Axe",
   "item.darkendepths.dark_boots": "§5§lDarkened Boots",
   "item.darkendepths.dark_chestplate": "§5§lDarkened Chestplate",
@@ -12,6 +13,9 @@
   "item.darkendepths.dark_pickaxe": "§5§lDarkened Pickaxe",
   "item.darkendepths.dark_shovel": "§5§lDarkened Shovel",
   "item.darkendepths.dark_sword": "§5§lDarkened Sword",
+  "item.darkendepths.darkshadow_core": "DarkShadow's Core",
   "item.darkendepths.shadow_stone": "Shadow Stone",
-  "screen.darkendepths.shadowstone_inventory": "Shadow's Inventory"
+  "screen.darkendepths.shadowstone_inventory": "Shadow's Inventory",
+  "tooltip.darkendepths.knockback.tooltip.1": "§5§lThe Barrier created by the Darkness",
+  "tooltip.darkendepths.knockback.tooltip.2": "§mRight §mClick to §d§lHarness the Power"
 }

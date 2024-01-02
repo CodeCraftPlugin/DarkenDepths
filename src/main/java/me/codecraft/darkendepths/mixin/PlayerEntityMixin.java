@@ -69,18 +69,18 @@ public abstract class PlayerEntityMixin extends LivingEntity implements IPlayerI
     @ModifyVariable(method = "damage", at = @At("HEAD"), argsOnly = true)
     private float modifyDamage(float amount, DamageSource source) {
         PlayerEntity player = (PlayerEntity)(Object) this;
-        ItemStack attackerItem  = player.getAttacker().getStackInHand(Hand.MAIN_HAND).getItem().getDefaultStack();
-        List<Item> yourItemList = Arrays.asList(DarkenDepthsItems.DARK_PICKAXE,DarkenDepthsItems.DARK_AXE,DarkenDepthsItems.DARK_SWORD,DarkenDepthsItems.DARKSHADOW_CORE);
-        if (player.hasStatusEffect(DarkenDepthsStatusEffects.SHADOW_PROTECTION) && !(player.getWorld().isDay() )&& (player.getHealth()<1)&& !(yourItemList.contains(attackerItem))) {
-
-            return 0.0F;
+        if (player.getAttacker() != null) {
+            ItemStack attackerItem  = player.getAttacker().getStackInHand(Hand.MAIN_HAND).getItem().getDefaultStack();
+            List<Item> yourItemList = Arrays.asList(DarkenDepthsItems.DARK_PICKAXE,DarkenDepthsItems.DARK_AXE,DarkenDepthsItems.DARK_SWORD,DarkenDepthsItems.DARKSHADOW_CORE);
+            if (player.hasStatusEffect(DarkenDepthsStatusEffects.SHADOW_PROTECTION) && !(player.getWorld().isDay() )&& (player.getHealth()<1)&& !(yourItemList.contains(attackerItem))) {
+                return 0.0F;
+            }
         }
         return amount;
     }
 
     private void CheckArmor(PlayerEntity player){
-//        System.out.println(player.getArmorItems().iterator().next().getItem());
-
+//
         if(player.getEquippedStack(EquipmentSlot.HEAD).getItem() != DarkenDepthsItems.DARK_HELMET){
             resetArmorEffect(player);
 

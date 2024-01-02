@@ -32,6 +32,8 @@ public class DarkenDepthsLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(DarkenDepths.MOD_ID+".advancement.get_darkness_armor", "Get Full Darkened Armor");
         translationBuilder.add("screen.darkendepths.shadowstone_inventory","Shadow's Inventory");
         translationBuilder.add(DarkenDepthsStatusEffects.SHADOW_PROTECTION,"Shadow's Protection");
+        translationBuilder.add("tooltip."+ DarkenDepths.MOD_ID+".knockback.tooltip.1","§5§lThe Barrier created by the Darkness");
+        translationBuilder.add("tooltip."+ DarkenDepths.MOD_ID+".knockback.tooltip.2","§mRight §mClick to §d§lHarness the Power");
     }
 }
 

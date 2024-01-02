@@ -11,6 +11,6 @@ public class DarkenDepthsStatusEffects {
 
     public static final StatusEffect SHADOW_PROTECTION = Registry.registerStatusEffects("shadow_protection", DarkenDepths.MOD_ID,new DarkenDepthsStatusEffect(StatusEffectCategory.BENEFICIAL, 0x22203b));
     public static void StatusEffectsInit() {
-        System.out.println("Darken Depths Status Effects Initialized");
+        DarkenDepths.logger.debug("Darken Depths Status Effects Initialized");
     }
 }
