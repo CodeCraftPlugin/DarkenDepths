@@ -29,10 +29,6 @@ public class DarkenDepths implements ModInitializer {
         DarkenDepthsWorldGeneration.generateWorldGen();
         DarkenDepthsStatusEffects.StatusEffectsInit();
 
-        ServerWorldEvents.LOAD.register((server, world) -> {
-            if (!world.isClient()) {
 
-            }
-        });
     }
 }

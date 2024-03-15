@@ -13,9 +13,11 @@ import net.minecraft.util.Identifier;
 import java.util.function.Consumer;
 
 public class DarkenDepthsAdvancement {
+    public AdvancementEntry root;
 
     public void accept(Consumer<AdvancementEntry> advancementConsumer) {
-        AdvancementEntry root = Advancement.Builder.create().display(
+
+        root = Advancement.Builder.create().display(
                         DarkenDepthsItems.DARK_ESSENCE, // The display icon
                         Text.literal("DarkenDepths"), // The title
                         Text.literal("DarkenDepths"),// The description

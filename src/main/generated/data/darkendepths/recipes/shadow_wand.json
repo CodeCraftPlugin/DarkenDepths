@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "wand",
+  "key": {
+    "C": {
+      "item": "darkendepths:darkshadow_core"
+    },
+    "E": {
+      "item": "darkendepths:dark_essence"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "EEC",
+    "ESE",
+    "SEE"
+  ],
+  "result": {
+    "item": "darkendepths:shadow_wand"
+  },
+  "show_notification": true
+}

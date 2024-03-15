@@ -17,11 +17,4 @@ public class DarkenDepthsAdvancementGenerator extends FabricAdvancementProvider 
     public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
         new DarkenDepthsAdvancement().accept(consumer);
     }
-
-
-
-//    @Override
-//    public void generateAdvancement(Consumer<Advancement> consumer) {
-//        new DarkenDepthsAdvancement().accept(consumer);
-//    }
 }

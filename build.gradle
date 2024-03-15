@@ -14,6 +14,14 @@ repositories {
     // for more information about repositories.'
     mavenCentral()
     maven { url = 'https://maven.minecraftforge.net/' }
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroupByRegex("software\\.bernie.*")
+            includeGroup("com.eliotlash.mclib")
+        }
+    }
 //    maven {url "D:\\mod\\Fabric\\registry-lib\\build\\libs"}
 
 }
@@ -52,8 +60,10 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "io.github.codecraftplugin:registry-lib:${project.registery_lib_version}"
     modImplementation "com.github.glitchfiend:TerraBlender-fabric:${project.terra_blender_version}"
+    modImplementation "software.bernie.geckolib:geckolib-fabric-${geckolib_version}"
 
-    }
+
+}
 
 processResources {
     inputs.property "version", project.version

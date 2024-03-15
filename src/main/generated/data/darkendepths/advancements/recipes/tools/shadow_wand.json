@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dark_essence": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "darkendepths:dark_essence"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_darkshadow_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "darkendepths:darkshadow_core"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "darkendepths:shadow_wand"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_darkshadow_core",
+      "has_dark_essence"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "darkendepths:shadow_wand"
+    ]
+  },
+  "sends_telemetry_event": false
+}

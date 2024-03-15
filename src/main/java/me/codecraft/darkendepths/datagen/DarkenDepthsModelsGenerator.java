@@ -22,6 +22,7 @@ public class DarkenDepthsModelsGenerator extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(DarkenDepthsItems.SHADOW_STONE, Models.GENERATED);
+        itemModelGenerator.register(DarkenDepthsItems.DARKSHADOW_CORE, Models.GENERATED);
         itemModelGenerator.register(DarkenDepthsItems.DARK_ESSENCE, Models.GENERATED);
         itemModelGenerator.register(DarkenDepthsItems.DARK_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(DarkenDepthsItems.DARK_SWORD, Models.HANDHELD);

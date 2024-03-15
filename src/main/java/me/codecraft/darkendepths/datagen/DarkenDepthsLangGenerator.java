@@ -17,6 +17,7 @@ public class DarkenDepthsLangGenerator extends FabricLanguageProvider {
     public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(DarkenDepthsItems.SHADOW_STONE, "Shadow Stone");
         translationBuilder.add(DarkenDepthsItems.DARKSHADOW_CORE, "DarkShadow's Core");
+        translationBuilder.add(DarkenDepthsItems.SHADOWS_WAND, "Shadow's Wand");
         translationBuilder.add(DarkenDepthsBlocks.DARKENED_STONE_ORE, "§5Darkened Stone Ore");
         translationBuilder.add(DarkenDepthsBlocks.DEEPSLATE_DARKENED_STONE_ORE, "§5Deepslate Darkened Stone Ore");
         translationBuilder.add(DarkenDepthsItems.DARK_ESSENCE, "§5§lDark Essence");

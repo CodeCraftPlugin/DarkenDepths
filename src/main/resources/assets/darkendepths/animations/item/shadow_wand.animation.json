@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"main": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"Ring1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [180, 0, 0],
+							"easing": "linear"
+						}
+					}
+				},
+				"Ring2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [-180, 0, 0],
+							"easing": "linear"
+						}
+					}
+				},
+				"Cube": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 180]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

@@ -1,56 +1,56 @@
-# name: "Build Release"
-# on: push
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - { uses: actions/checkout@v2, with: { fetch-depth: 0 } }
-#       - {
-#         name: "Set up JDK 17",
-#         uses: actions/setup-java@v2,
-#         with: { distribution: "temurin", java-version: "17" },
-#       }
-#       - {
-#         name: "Build with Gradle",
-#         id: build,
-#         run: "chmod +x gradlew && ./gradlew build",
-#       }
-#       - name: Generate Changelog
-#         id: changelog
-#         run: echo "::set-output name=changelog::$(git log --pretty=format:"%h %s" -1)"
-#       - name: Create Release
-#         id: create_release
-#         uses: actions/create-release@v1
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-#         with:
-#           tag_name: ${{ steps.build.outputs.version }}
-#           release_name: Release Darken Depths ${{ steps.build.outputs.version }}
+ name: "Build Release"
+ on: push
+ jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+       - { uses: actions/checkout@v2, with: { fetch-depth: 0 } }
+       - {
+         name: "Set up JDK 17",
+         uses: actions/setup-java@v2,
+         with: { distribution: "temurin", java-version: "17" },
+       }
+       - {
+         name: "Build with Gradle",
+         id: build,
+         run: "chmod +x gradlew && ./gradlew build",
+       }
+       - name: Generate Changelog
+         id: changelog
+         run: echo "::set-output name=changelog::$(git log --pretty=format:"%h %s" -1)"
+       - name: Create Release
+         id: create_release
+         uses: actions/create-release@v1
+         env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+         with:
+           tag_name: ${{ steps.build.outputs.version }}
+           release_name: Release Darken Depths ${{ steps.build.outputs.version }}
 
-#       - name: Upload Release Asset
-#         id: upload-release-asset
-#         uses: actions/upload-release-asset@v1
+       - name: Upload Release Asset
+         id: upload-release-asset
+         uses: actions/upload-release-asset@v1
 
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#         with:
-#           upload_url: ${{ steps.create_release.outputs.upload_url }}
-#           asset_path: "build/libs/darkendepths-${{ steps.build.outputs.version }}.jar"
-#           asset_name: "darkendepths-${{ steps.build.outputs.version }}.jar"
-#           asset_content_type: application/java-archive
-#       - name: mc-publish
-#         uses: Kir-Antipov/mc-publish@v3.2
-#         with:
-#           modrinth-id: walrejrR
-#           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-#           modrinth-files: "build/libs/darkendepths-${{ steps.build.outputs.version }}.jar"
-#           name: "Darken Depths ${{ steps.build.outputs.version }}"
-#           version: ${{ steps.build.outputs.version }}
-#           version-type: beta
-#           changelog: ${{steps.build.outputs.changelog}}
-#           game-version: 1.20.2
-#           loaders: fabric
-#           dependencies:
-#             nPRrvbTb@1.20.2-1.0.0(required)
-#             kkmrDlKT@1.20.2-3.2.0.14(required)
-#             fabric@0.91.1+1.20.2(required){modrinth:P7dR8mSH}{curseforge:306612}#(ignore:github)
+         env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         with:
+           upload_url: ${{ steps.create_release.outputs.upload_url }}
+           asset_path: "build/libs/darkendepths-${{ steps.build.outputs.version }}.jar"
+           asset_name: "darkendepths-${{ steps.build.outputs.version }}.jar"
+           asset_content_type: application/java-archive
+       - name: mc-publish
+         uses: Kir-Antipov/mc-publish@v3.2
+         with:
+           modrinth-id: walrejrR
+           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+           modrinth-files: "build/libs/darkendepths-${{ steps.build.outputs.version }}.jar"
+           name: "Darken Depths ${{ steps.build.outputs.version }}"
+           version: ${{ steps.build.outputs.version }}
+           version-type: beta
+           changelog: ${{steps.build.outputs.changelog}}
+           game-version: 1.20.2
+           loaders: fabric
+           dependencies:
+             nPRrvbTb@1.20.2-1.0.0(required)
+             kkmrDlKT@1.20.2-3.2.0.14(required)
+             fabric@0.91.1+1.20.2(required){modrinth:P7dR8mSH}{curseforge:306612}#(ignore:github)
