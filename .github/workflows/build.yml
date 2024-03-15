@@ -39,7 +39,7 @@
            asset_name: "darkendepths-${{ steps.build.outputs.version }}.jar"
            asset_content_type: application/java-archive
        - name: mc-publish
-         uses: Kir-Antipov/mc-publish@v3.2
+         uses: Kir-Antipov/mc-publish@v3.3
          with:
            modrinth-id: walrejrR
            modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
