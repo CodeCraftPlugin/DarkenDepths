@@ -1,12 +1,11 @@
 package me.codecraft.darkendepths.mixin;
 
 
-import me.codecraft.darkendepths.datagen.tags.DarkenDepthsItemTag;
+import me.codecraft.darkendepths.DarkenDepths;
 import me.codecraft.darkendepths.inventory.ShadowStoneInventory;
 import me.codecraft.darkendepths.item.DarkenDepthsItems;
 import me.codecraft.darkendepths.mixinInterface.IPlayerInventroyMixin;
 import me.codecraft.darkendepths.status_effects.DarkenDepthsStatusEffects;
-import net.fabricmc.fabric.mixin.item.ItemStackMixin;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -17,10 +16,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
-import net.minecraft.registry.tag.TagKey;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -28,11 +28,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity implements IPlayerInventroyMixin {
 
+
+    @Shadow public abstract void playSound(SoundEvent sound, float volume, float pitch);
 
     ShadowStoneInventory shadowStoneInventory = new ShadowStoneInventory();
 
@@ -66,17 +67,17 @@ public abstract class PlayerEntityMixin extends LivingEntity implements IPlayerI
 
     }
     //Modifying Variable
-    @ModifyVariable(method = "damage", at = @At("HEAD"), argsOnly = true)
-    private float modifyDamage(float amount, DamageSource source) {
+    @Inject(method = "applyDamage", at = @At("HEAD"))
+    private void modifyDamage(DamageSource source, float amount, CallbackInfo ci) {
         PlayerEntity player = (PlayerEntity)(Object) this;
         if (player.getAttacker() != null) {
+            DarkenDepths.logger.info("Attacker: " + player.getAttacker());
             ItemStack attackerItem  = player.getAttacker().getStackInHand(Hand.MAIN_HAND).getItem().getDefaultStack();
             List<Item> yourItemList = Arrays.asList(DarkenDepthsItems.DARK_PICKAXE,DarkenDepthsItems.DARK_AXE,DarkenDepthsItems.DARK_SWORD,DarkenDepthsItems.DARKSHADOW_CORE);
             if (player.hasStatusEffect(DarkenDepthsStatusEffects.SHADOW_PROTECTION) && !(player.getWorld().isDay() )&& (player.getHealth()<1)&& !(yourItemList.contains(attackerItem))) {
-                return 0.0F;
+                player.setHealth(player.getHealth());
             }
         }
-        return amount;
     }
 
     private void CheckArmor(PlayerEntity player){

@@ -1,6 +1,7 @@
 package me.codecraft.darkendepths;
 
 import me.codecraft.darkendepths.blocks.DarkenDepthsBlocks;
+import me.codecraft.darkendepths.entity.DarkenDepthsEntities;
 import me.codecraft.darkendepths.item.DarkenDepthsGroupItems;
 import me.codecraft.darkendepths.item.DarkenDepthsItems;
 import me.codecraft.darkendepths.status_effects.DarkenDepthsStatusEffect;
@@ -28,6 +29,7 @@ public class DarkenDepths implements ModInitializer {
         DarkenDepthsGroupItems.GroupItemsinit();
         DarkenDepthsWorldGeneration.generateWorldGen();
         DarkenDepthsStatusEffects.StatusEffectsInit();
+        DarkenDepthsEntities.init();
 
 
     }

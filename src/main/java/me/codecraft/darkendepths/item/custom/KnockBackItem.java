@@ -55,9 +55,9 @@ public class KnockBackItem extends Item implements GeoItem {
             for(Entity entity : entities){
                 if(entity instanceof LivingEntity) {   // Knockback is only applicable to Living entities
                     Vec3d vec = entity.getPos().subtract(user.getPos()).normalize();
-                    ((LivingEntity) entity).takeKnockback(2, vec.x+entity.getPos().x, vec.z+entity.getPos().z);   // apply knockback effect
+                    ((LivingEntity) entity).takeKnockback(5.5D, vec.x+entity.getPos().x, vec.z+entity.getPos().z);   // apply knockback effect
                 }
-                System.out.println("Entity name: " + entity.getEntityName());
+                System.out.println("Entity name: " + entity.getDisplayName().toString());
                 System.out.println("Entity position: " + entity.getBlockPos().toString());
             }
         }
